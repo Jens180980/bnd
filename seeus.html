@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BND | SEE US</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+                                <!--TOP/NAV SECTION-->
+
+        <section id=top>
+            <a href="index.html" id="logoLink"><img src="./assets/img/logo-bnd.png" alt="BND logo"></a>
+                <ul id="bigScreen">         <!--LONG MENU FOR BIG SCREENS-->
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">SHOWS</a></li>
+                    <li><a href="#">JOIN</a></li>
+                    <li><a href="seeus.html">SEE US</a></li>
+                </ul>
+                <div id="smallScreen">      <!-- BURGERMENU FOR SMALL SCREENS-->
+                    <input id="clicker" type="checkbox">
+                    <div></div>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#">SHOWS</a></li>
+                        <li><a href="#">JOIN</a></li>
+                        <li><a href="seeus.html">SEE US</a></li> 
+                    </ul>
+                </div>
+        </section>
+
+    <main>
+        <h1 id="headerVideo">SEE OUR LATEST MUSIC VIDEO</h1>
+        <section id="video">
+
+            <video src="./assets/vid/Bnd.mp4" poster="assets/img/thumbnail.png"  controls></video>
+
+        </section>
+
+    </main>
+
+    <footer>                 <!--FORM/FOOTER SECTION-->
+        <form>
+            <h3>Keep me informed</h3>
+            <input name="name" id="name" type="text" placeholder="TYPE YOUR NAME">
+            <input name="email" id="email" type="email" placeholder="TYPE YOUR EMAIL" required> 
+            <div id="confirmAcceptWrap">
+                <button>CONFIRM</button>
+                <label id="checkMain" for="accept">
+                <input name="accept" id="accept" type="checkbox">
+                <span id="checkNew"></span><span id="checkText">I accept the terms and conditions</span>
+                </label>
+            </div>
+        </form>
+<a href="#hero"><img src="./assets/img/logo-bnd.png" alt="BND logo"></a>
+</footer>
+
+</body>
+</html>

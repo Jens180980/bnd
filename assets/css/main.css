@@ -1,0 +1,425 @@
+/****************************
+****  GENERAL SETTINGS  ****
+****************************/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root{
+    --bgColor:#111029;
+    --FooterColor:#1e1c47 ;
+    --logoColor:#2cd1c7;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background: var(--bgColor);
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: var(--logoColor);
+}
+ul{
+    list-style: none;
+}
+
+/****************************
+****  TOP/NAV SETTINGS  ****
+****************************/
+
+#top{
+    position: sticky;
+    top:0;
+    display: flex;
+    height: 4rem;
+    background-color: var(--bgColor);
+    z-index: 10;
+}
+#top img{
+    margin: 0.5rem;
+    width: 35%;
+}
+#top #bigScreen{
+    display: none;
+}
+#top #smallScreen{
+    position: relative;
+}
+#top #smallScreen input{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    z-index: 10;
+}
+#top #smallScreen ul{
+    margin-top: 2.5rem;
+    padding: 0.5rem;
+    display: none;
+    background-color: var(--bgColor);
+}
+#top #smallScreen ul li{
+    padding-top: 0.5rem;
+}
+#top #smallScreen ul li a{
+    font-size: 2rem;
+    color: white;
+}
+#top #smallScreen input:checked ~ul{
+    display: block;
+}
+
+/** BURGERMENU ICON**/
+
+#top #smallScreen div{
+    position: absolute;
+    top:20px;
+    right: 15px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--logoColor);
+}
+#top #smallScreen div::after{
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--logoColor);
+}
+#top #smallScreen div::before{
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--logoColor);
+}
+
+
+/****************************
+****    HERO SETTINGS    ****
+****************************/
+#hero{
+    margin:0 0 1rem 0 ;
+}
+#hero h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--logoColor);
+}
+
+/****************************
+**  PRESENTATION SETTINGS  **
+****************************/
+#pres{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+#pres figure figcaption{
+    position: relative;
+    margin: 1rem;
+}
+#pres figure figcaption p{
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+#pres figure figcaption a{
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+}
+
+
+/****************************
+**  WHITE SKULL SETTINGS   **
+****************************/
+#whiteLogo{
+    display: flex;
+    justify-content: center;
+}
+#whiteLogo img{
+    width: 75%;
+    padding: 3rem;
+}
+
+/****************************
+****  ARTICLES SETTINGS  ****
+****************************/
+
+#articles{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+}
+#articles figure figcaption{
+    position: relative;
+    margin: 1rem;
+}
+#articles figure figcaption h2{
+    margin-bottom: 1rem;
+}
+#articles figure figcaption p{
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+#articles figure figcaption a{
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+}
+
+/****************************
+****   VIDEO PAGE SETTINGS   ****
+****************************/
+#headerVideo{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--logoColor);
+    font-weight: 300;
+}
+#video{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+    
+}
+#video video{
+    width: 95%;
+}
+
+/****************************
+****   FOOTER SETTINGS   ****
+****************************/
+footer{
+    display: block;
+    background-color: var(--FooterColor);
+}
+footer form h3{
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: var(--logoColor);
+}
+footer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+footer form input{
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--FooterColor);
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5rem;
+}
+#confirmAcceptWrap{
+    position: relative;
+    width: 100%;
+}
+footer form button{
+    display: block;
+    width: 75%;
+    padding: 1rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    background-color: var(--FooterColor);
+    border: 1px solid var(--logoColor);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+footer form label{
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    position: relative;
+}
+footer form label #accept{
+    display: none;
+}
+footer form label #checkText{
+    font-size: 1rem;
+    margin-left: 15%;
+    width: 100%;
+    padding-top: 1rem;
+}
+footer form label #checkNew{
+    position: absolute;
+    top: 0px;
+    left: 7%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 15%;
+}
+footer form label #checkNew::after{
+    content:'';
+    position: absolute;
+    display: none;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: 3px solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+footer form input:checked ~#checkNew::after{
+    display:block;
+}
+footer a img{
+    width: 75%;
+    padding: 0 0 2rem 5rem;
+}
+::placeholder{
+    color: white;
+}
+
+/**********************************
+** MEDIA QUERY FOR BIG SCREENS **
+**********************************/
+
+@media screen and (min-width: 1000px){
+
+/** GENERAL SETTINGS **/
+
+main{
+    width: 90%;
+    margin: auto;
+}
+a{
+    transition: all 0.3s ease-in-out;
+}
+a:hover{
+    border-bottom: 1px solid var(--logoColor);
+    color: white;
+}
+
+/** TOP/NAV SETTINGS **/
+#top{
+    justify-content: space-between;
+    height: 6rem;
+}
+#top #logoLink{
+    border: none;
+    transform: scale(0.98);
+    transition: transform 0.5 ease-in-out;
+}
+#top #logoLink:hover{
+    transform: scale(1)
+}
+#top #bigScreen{
+    display:flex;
+    padding: 2rem;
+}
+#top #bigScreen li{
+    margin-left: 3rem;
+    font-size: 2rem;
+}
+#top #smallScreen{
+    display:none;
+}
+
+/** HERO SETTINGS **/
+#hero h1{
+    font-size: 5rem;
+    padding: 2rem 0;
+}
+
+/** WHITE SKULL SETTINGS **/
+#whiteLogo img{
+    width: 25%;
+    padding: 5rem;
+    transition: transform 0.8s ease-in-out;
+}
+#whiteLogo img:hover{
+    transform: rotate(360deg);
+}
+
+/** VIDEO PAGE SETTINGS **/
+#headerVideo{
+    font-size: 5rem;
+    margin-top: 4rem;
+}
+
+/** FOOTER SETTINGS **/
+footer{
+    display: grid;
+    grid-template-columns: 50% 50%;  
+}
+
+footer form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+footer form button{
+    display: inline-block;
+    width: 40%;
+    align-self: start;
+}
+footer form button:hover{
+    border:2px solid white;
+    color: var(--logoColor);
+}
+#confirmAcceptWrap{
+    position: relative;
+    width: 100%;
+}
+footer form #confirmAcceptWrap label{
+    position: absolute;
+    bottom: 15px;
+    left: 300px;
+    display: inline-block;
+}
+footer form label #checkNew{
+    top: 20%;
+    left: 12%;
+}
+footer form label #checkText{
+    font-size: 1.3rem;
+    margin-left: 17%;
+    width: 100%;
+    padding-top: 1rem;
+}
+footer a{
+    padding-top: 2rem; 
+    width: 100%;
+    align-self: center;
+    transform: scale(0.98);
+    transition: all 0.5s ease-in-out;
+}
+footer a:hover{
+    border: none;
+    transform: scale(1);
+}
+
+}  /**************  MEDIA QUERY ENDS  *****************/
+
+
